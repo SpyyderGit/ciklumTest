@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+</head>
+<body>
+    <div class="well">
+        
+        <table class="table table-striped">
+            <tr>
+            <td colspan="4" align="center"><h3>Распродажа книг</h3></td>
+            </tr>
+            <tr class="header">
+                <td><p>№</p></td>
+                <td><p>Название книги</p></td>
+                <td><p>Автор</p></td>
+                <td><p>Цена грн.</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Books)
+            {
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p><a href="/Home/Buy/@b.Id" class="text-warning">@b.Name</p></td>
+                    <td><p>@b.Author</p></td>
+                    <td><p>@b.Price</p></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
