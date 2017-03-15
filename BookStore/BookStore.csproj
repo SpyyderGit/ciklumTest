@@ -167,7 +167,7 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookContext.cs" />
     <Compile Include="Models\BookDbinitializer.cs" />
-    <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\AllInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -209,7 +209,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <AdditionalFiles Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Buy.cshtml" />
   </ItemGroup>
   <ItemGroup>

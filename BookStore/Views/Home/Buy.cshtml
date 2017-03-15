@@ -1,24 +1,39 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div>
-        <h3>Инфо</h3>
-        
-                       <table>
-                           <tr>
-                                      <td rowspan="4"><img src="http://mywishlist.ru/pic/i/wish/orig/007/216/158.jpeg"/>fdgdfgdfgdf</td>
-                                      <td><h4>Низвание: </h4> @ViewBag.Name</td>
-                           </tr>
-                           <tr>
-                               <td><h4>Автор: </h4> @ViewBag.Author</p></td>
-                           </tr>
-                           <tr>
-                               <td><h4>Описание: </h4> @ViewBag.Remark</td>
-                           </tr>   
-                           
-                            <tr>
-                               <td><span style="font-weight:bold">Цена: </span> @ViewBag.Price</td>
-                           </tr>           
-                       </table>
-               </div>
-  
+
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+</head>
+
+<body>
+   <table style="background-color:lightgray; position:center">
+        <tr>
+         <td><img src="http://mywishlist.ru/pic/i/wish/orig/007/216/158.jpeg" class="img-rounded"/></td>
+            <td rowspan="2">
+                <dl class="dl-horizontal">
+                    <dt>Низвание: </dt>
+                    <dd>@ViewBag.Name</dd>
+                    <dt>Автор:</dt>
+                    <dd>@ViewBag.Author</dd>
+                    <dt>Цена: </dt>
+                    <dd>@ViewBag.Price</dd>
+                </dl>
+            </td>
+       </tr>
+        <tr>
+            <td colspan="2">
+                <div class="well">
+                    <dl>
+                        <dt>Описание:</dt>
+                        <dd>@ViewBag.Remark</dd>
+                    </dl>
+                </div>
+            </td>
+        </tr>
+     </table>
+ </body>
+
+
+

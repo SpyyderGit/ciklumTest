@@ -1,8 +1,5 @@
 ﻿using BookStore.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace BookStore.Controllers
@@ -15,7 +12,7 @@ namespace BookStore.Controllers
             // получаем из бд все объекты Book
             IEnumerable<Book> books = db.Books;
             ViewBag.Books = books;
-            return View();
+            return View("Index");
         }
         [HttpGet]
         public ActionResult Buy(int id)
@@ -33,7 +30,7 @@ namespace BookStore.Controllers
                 }
             }
 
-            return View();
+            return View("Buy");
         }
     }
 }
